@@ -17,7 +17,7 @@
 
           <input
             type="text"
-            id="Search"
+            id="task-input"
             placeholder="Add Your Task"
             class="w-full rounded-md border border-gray-300 py-2.5 pe-10 shadow-xs sm:text-sm px-2"
           />
@@ -25,7 +25,7 @@
           <span
             class="absolute inset-y-0 end-0 grid w-20 bg-gray-900 text-white place-content-center"
           >
-            <button type="button" class="text-white hover:text-yellow-400">
+            <button type="button" class="text-white hover:text-yellow-400" id="add-task" onclick="createTask()">
               Add Task
             </button>
           </span>
@@ -34,7 +34,7 @@
 
       <!-- Task Lists Container -->
       <section>
-        <div class="max-w-2xl mx-auto mt-6">
+        <div class="max-w-2xl mx-auto mt-6 flex flex-col gap-4" id="task-container">
           <div class="task-list flex border bg-gray-100 rounded-md">
             <input
               type="text"
@@ -57,7 +57,30 @@
             </d>
           </div>
         </div>
+        <div class="task-list flex border bg-gray-100 rounded-md">
+            <input
+              type="text"
+              class="w-full border-gray-300 py-2.5 pe-10 shadow-xs sm:text-sm px-2"
+              value="Task 2" readonly
+            />
+            <div class="flex gap-2 text-white p-1">
+              <button
+                type="button"
+                class="text-white bg-green-500 px-4 rounded-md hover:text-black"
+              >
+                Edit
+              </button>
+              <button
+                type="button"
+                class="text-white bg-red-600 px-4 rounded-md hover:text-blue-900"
+              >
+                Delete
+              </button>
+            </d>
+          </div>
+        </div>
       </section>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>
