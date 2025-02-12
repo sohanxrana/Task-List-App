@@ -1,7 +1,17 @@
 // selector
+let allDivs = [];
+
 const taskInput = document.getElementById("task-input");
 const addTaskBtn = document.getElementById("add-task");
 const taskContainer = document.getElementById("task-container");
+
+let getDivsFromLocalStorage = JSON.parse(localStorage.getItem("div"));
+
+if (getDivsFromLocalStorage) {
+  allDivs = getDivsFromLocalStorage;
+  createTask(allDivs);
+}
+
 //create a task
 function createTask() {
   const task = taskInput.value;
