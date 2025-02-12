@@ -18,7 +18,7 @@ function createTask() {
     const taskName = document.createElement("input");
     taskName.value = task;
     taskName.classList.add("task-input");
-    // taskDiv.classList.add("task-list");
+    taskName.setAttribute("readonly", "readonly");
     taskDiv.appendChild(taskName);
 
     //create a button now
@@ -41,9 +41,24 @@ function createTask() {
     taskContainer.appendChild(taskDiv);
 
     taskInput.value = "";
+
     //delete Btn
     deleteBtn.addEventListener("click", function (e) {
       console.log(e.target.parentElement.parentElement.remove());
+    });
+
+    //edit btn
+    editBtn.addEventListener("click", function (e) {
+      console.log("edit button clicked");
+      console.log(e, e.target);
+      if (e.target.innerText == "Edit") {
+        taskName.removeAttribute("readonly");
+        taskName.focus();
+        editBtn.innerText = "Update";
+      } else {
+        editBtn.innerText = "Edit";
+        taskName.setAttribute("readonly", "readonly");
+      }
     });
   } else {
     alert("Please enter a task");
