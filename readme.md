@@ -2,8 +2,6 @@
 
 A simple and interactive **Task List App** to manage your daily tasks efficiently! 📝🚀  
 
-![Task List App Banner](https://via.placeholder.com/1000x300?text=Task+List+App)  
-
 ## 📌 About  
 
 The **Task List App** allows users to **add, delete, and filter tasks** with an easy-to-use interface. Perfect for managing to-dos and staying organized! 🎯  
@@ -16,9 +14,6 @@ The **Task List App** allows users to **add, delete, and filter tasks** with an 
 ✅ **Filter tasks** in real time 🔍  
 ✅ **Local storage support** - Tasks remain saved after page reload 🔄  
 ✅ **Responsive design** - Works on all devices 📱💻  
-
-## 📷 Screenshot  
-![App Screenshot](https://via.placeholder.com/800x400?text=Task+List+App+Screenshot)  
 
 ## 🔧 Installation  
 
